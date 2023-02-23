@@ -1,19 +1,17 @@
-from utils.stack import Stack
-from utils.node import Node
+class Node:
+
+    def __init__(self, data=None, next_node=None):
+        self.data = data
+        self.next_node = next_node
 
 
-def main():
-    n1 = Node(5, None)
-    print(n1)
+class Stack:
 
-    stack = Stack()
-    stack.push('data1')
-    stack.push('data2')
-    stack.push('data3')
+    def __init__(self, head=None):
+        self.head = head
 
-
-if __name__ == "__main__":
-    main()
-
-
+    def push(self, data):
+        new_node = Node(data)
+        new_node.next_node = self.head
+        self.head = new_node
 
