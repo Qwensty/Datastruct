@@ -15,3 +15,10 @@ class Stack:
         new_node.next_node = self.head
         self.head = new_node
 
+    def pop(self):
+        if self.head is None:
+            return
+        value = self.head.data
+        self.head = self.head.next_node
+        return value
+
